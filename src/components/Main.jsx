@@ -18,6 +18,10 @@ function Main({
   /*Initial State for Edit Fab Button */
   const [isFab, setFab] = React.useState(false);
 
+  //intial condition for table pagination
+
+  const [intialPage, setIntialPage] = React.useState(0);
+
   /*Handler to Close the Sidebar if we click on Main UI if the sidebar is in active state */
 
   const handleSidebar = () => {
@@ -28,6 +32,7 @@ function Main({
 
   /* Change page title dynamically based on tablename selected */
   document.title = tablename ? tablename.toUpperCase() : "Live SQL";
+
   return (
     <div
       className={`main__ui ${!isExecuted && "centered__ui"} ${
@@ -49,11 +54,15 @@ function Main({
           {isExecuted ? (
             <>
               {!isError ? (
-                <Table
-                  tablename={tablename}
-                  isError={isError}
-                  setError={setError}
-                />
+                <>
+                  <Table
+                    tablename={tablename}
+                    isError={isError}
+                    setError={setError}
+                    intialPage={intialPage}
+                    setIntialPage={setIntialPage}
+                  />
+                </>
               ) : (
                 <p>{isError}</p>
               )}

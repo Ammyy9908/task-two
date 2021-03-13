@@ -2,7 +2,7 @@ import React from "react";
 import { readRemoteFile } from "react-papaparse";
 import { CsvToHtmlTable } from "react-csv-to-table";
 
-export default function BasicTable({ tablename, setError, isError }) {
+export default function BasicTable({ tablename, setError }) {
   const [data, setData] = React.useState(null);
 
   const shortTD = () => {
@@ -50,6 +50,7 @@ export default function BasicTable({ tablename, setError, isError }) {
   }
   return (
     <CsvToHtmlTable
+      pagination={true}
       data={sampleData}
       csvDelimiter=","
       tableClassName="table table-striped table-hover"
