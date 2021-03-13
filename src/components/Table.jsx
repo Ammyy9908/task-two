@@ -6,10 +6,13 @@ export default function BasicTable({ tablename, setError, isError }) {
   const [data, setData] = React.useState(null);
 
   const shortTD = () => {
+    document.querySelector("table").classList.add("table-responsive");
     const tds = document.querySelectorAll("td");
     Array.from(tds).map((td) => {
       let newData =
-        td.textContent.length > 25 && td.textContent.slice(1, 25) + "....";
+        td.textContent.length > 25
+          ? td.textContent.slice(1, 25) + "...."
+          : td.textContent;
       td.textContent = newData;
       return false;
     });
