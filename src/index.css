@@ -8,22 +8,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Dark Theme Styles */
 body.dark-theme {
   background-color: #262626;
   color: #fff;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
-body.light-theme {
-  background-color: #fafafa;
-  color: #262626;
-  transition: all 0.8s ease-in-out;
-}
-
 body.dark-theme .navbar {
   background-color: #f73378;
 }
-
 body.dark-theme .MuiFab-primary {
   background-color: #f73378;
 }
@@ -37,8 +30,10 @@ body.dark-theme .sidenav {
 body.dark-theme .query__section {
   background-color: var(--secondaryDark);
 }
-
-/* body.dark-theme th {
+body.dark-theme table {
+  box-shadow: none;
+}
+body.dark-theme th {
   background-color: #f73378;
 }
 
@@ -48,7 +43,7 @@ body.dark-theme tr:nth-child(even) {
 
 body.dark-theme tr:nth-child(odd) {
   background-color: var(--secondaryAccent);
-} */
+}
 
 body.dark-theme .sidebar {
   background-color: var(--secondaryDark);
@@ -58,6 +53,29 @@ body.dark-theme .sidenav__option {
 
   transition: all 0.3s ease-in-out;
 }
+
+body.dark-theme .sidenav__option:hover {
+  color: #000;
+  font-weight: 900;
+}
+body.dark-theme .option__active {
+  background-color: #161d34;
+  color: #fff;
+}
+
+body.dark-theme .option__active:hover {
+  color: #fff;
+  font-weight: 900;
+}
+
+/* Light Theme Styles */
+
+body.light-theme {
+  background-color: #fafafa;
+  color: #262626;
+  transition: all 0.3s ease-in-out;
+}
+
 body.light-theme .sidenav__option {
   background-color: var(--primaryLight);
 
@@ -67,26 +85,17 @@ body.light-theme .sidenav__option {
   color: #fff;
   background-color: var(--primaryLight);
 }
-body.dark-theme .sidenav__option:hover {
-  color: #000;
-  font-weight: 900;
-}
+
 body.light-theme .sidenav__option:hover {
   color: #000;
   font-weight: 900;
 }
-body.dark-theme .option__active {
-  background-color: #161d34;
-  color: #fff;
-}
+
 body.light-theme .option__active {
   background-color: #161d34;
   color: #fff;
 }
-body.dark-theme .option__active:hover {
-  color: #fff;
-  font-weight: 900;
-}
+
 body.light-theme .option__active:hover {
   color: #fff;
   font-weight: 900;

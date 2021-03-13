@@ -23,6 +23,7 @@
   --radius: 0.2rem;
 }
 
+/* Main Navbar */
 .navbar {
   width: 100%;
   background-color: var(--primaryAccent);
@@ -30,6 +31,8 @@
   top: 0;
   z-index: 999;
 }
+
+/*Navbar Wrapper has a width of 95% and margin of 0 auto so it comes to center*/
 
 .navbar__wrapper {
   width: 95%;
@@ -39,6 +42,9 @@
   align-items: center;
   justify-content: space-between;
 }
+
+/*Since navbar has display flex so children can be place in row or in column so it is default in row*/
+/*Navbar Left containing a IconButton(MaterialUI Component) and a Product Name*/
 .navbar__left {
   flex: 1;
   display: flex;
@@ -57,7 +63,7 @@
   justify-content: flex-end;
 }
 
-/**Main UI **/
+/**Main UI (Components except Navbar)**/
 
 .main__ui {
   display: flex;
@@ -105,7 +111,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /*Sidebar*/
@@ -129,7 +135,6 @@
   margin: 10px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 90%;
 }
 
@@ -172,6 +177,29 @@
   position: fixed;
   right: 25px;
   bottom: 25px;
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 20px 20px 20px 5px var(--clr-primary-dark);
+  background-color: white;
+  text-align: left;
+  border-radius: 10px !important;
+}
+th {
+  background-color: var(--clr-primary);
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+
+td {
+  padding: 1rem 2rem;
+}
+tr:nth-child(even) {
+  background-color: var(--clr-primary-light);
 }
 
 /*Media Queries*/

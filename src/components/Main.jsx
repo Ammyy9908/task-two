@@ -12,6 +12,8 @@ function Main({
   setExecuted,
   isSidebar,
   setSidebar,
+  isError,
+  setError,
 }) {
   /*Initial State for Edit Fab Button */
   const [isFab, setFab] = React.useState(false);
@@ -45,7 +47,17 @@ function Main({
       <div className="result__table__section">
         <>
           {isExecuted ? (
-            <Table />
+            <>
+              {!isError ? (
+                <Table
+                  tablename={tablename}
+                  isError={isError}
+                  setError={setError}
+                />
+              ) : (
+                <p>{isError}</p>
+              )}
+            </>
           ) : (
             <img src={empty} alt="Blank__Result" className="blank__query" />
           )}
